@@ -1,4 +1,4 @@
-package real;
+package gms;
 
 public class Member {
 	String name; //멤버변수(멤버변수는 초기화 하지않는다.)

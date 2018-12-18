@@ -1,4 +1,4 @@
-package real;
+package gms;
 
 import javax.swing.JOptionPane;
 
@@ -65,7 +65,6 @@ public class Main {
 				break;
 			case "5":
 				MyCalender calender = new MyCalender();
-				
 				break;
 			}
 		}

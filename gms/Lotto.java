@@ -1,4 +1,4 @@
-package real;
+package gms;
 
 import java.util.Random;
 
