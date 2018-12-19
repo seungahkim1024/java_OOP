@@ -1,7 +1,7 @@
 package bank3;
 
 public class Member {
-	String name, ssn, id, pass;
+	String name, ssn, id, pass;//멤버변수이자 인스턴스변수. ex member.name 이런거.
 	public Member(String name, String ssn, String id, String pass){
 		this.name = name;
 		this.ssn = ssn;

@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class Main {
 	public static void main(String[] args){
 		Member member = null;
-		Account account = null;
+		Account3 account = null;
 		
 		while(true){
 			switch(JOptionPane.showInputDialog(
@@ -24,7 +24,7 @@ public class Main {
 					JOptionPane.showMessageDialog(null,in);
 					break;
 				case "2":
-					account = new Account(0);
+					account = new Account3(0);
 					break;
 				case "3":
 					String number = account.number(member.name);

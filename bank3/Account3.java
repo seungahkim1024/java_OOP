@@ -4,11 +4,11 @@ import java.util.Random;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Account {
+public class Account3 {
 	final static String BANKNAME = "신한은행";
 	String accountnum, date;
 	int money;
-	public Account(int money){
+	public Account3(int money){
 		this.accountnum = this.randomfor();
 		this.date = this.when();
 		

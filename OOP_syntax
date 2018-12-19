@@ -39,3 +39,34 @@ real-world objects
 클래스변수(리얼월드객체), 인스턴스변수(가상객체)
 
 객체지향프로그래밍 : 상속. 은닉화. 추상화. 다형성
+
+메소드의 선언구조
+public String test(String a){
+접근제한 +리턴타입 + ID+(파라미터) + {에어리어}
+	a
+} ->파라미터
+
+m.test(a); -> 아규먼트
+
+// 리턴타입
+결과 없으면 void
+결과 있으면 String, int, ..., Member
+리턴이 없는 경우와 있는 경우 판단은 개발자가.
+
+OOP의 절차(프로세서)
+	1. 어떤 객체( class, instance )를 만들지 결정한다.
+	2. 클래스객체가 속성(멤버변수)과 기능(멤버메소드)을 결정한다.
+
+         /**   Main
+            [속성] 없음
+            [기능] main( )
+            Member
+            [속성]명사:: name,ssn,id,pass
+            [기능]동사:: 회원정보 보여주기 info( );
+            Account
+            [속성] String accountNum, today; int money;
+            [기능] generatorAccountNum( ) //계좌번호생성
+                       today( ) // 오늘날짜생성
+                       info( ) // 계좌정보 보여주기
+        */
+        3, 객체들 사이에서 메시지를 주고 받게 한다. (클래스와 인스턴스사이에서 생산자를 이용해 메시지를 주고 받음)
