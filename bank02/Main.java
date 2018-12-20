@@ -1,4 +1,4 @@
-package bank2;
+package bank02;
 
 import javax.swing.JOptionPane;
 

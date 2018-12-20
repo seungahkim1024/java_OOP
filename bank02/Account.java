@@ -1,4 +1,4 @@
-package bank2;
+package bank02;
 
 import java.util.Date;
 import java.text.SimpleDateFormat;
