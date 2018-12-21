@@ -1,4 +1,4 @@
-package bank3;
+package bank03;
 
 public class Member {
 	String name, ssn, id, pass;//멤버변수이자 인스턴스변수. ex member.name 이런거.

@@ -1,44 +1,42 @@
-package bank33test;
+package bank41;
 
 public class MemberBean {
 	private String id, name, ssn, pass;
-	public MemberBean(String id, String name, String ssn, String pass){
-		this.id = id;
-		this.name = name;
-		this.ssn = ssn;
-		this.pass = pass;
-	}
-	public void setId(){
+
+	public void setId(String id){
 		this.id = id;
 	}
 	public String getId(){
 		return id;
 	}
-	public void setName(String name){
-		this.name = name;
+	public void setName(String name){ //setter
+		this.name=name; // write
 	}
-	public String getName(){
-		return name;
+	public String getName(){ //getter
+		return name; // read
 	}
-	public void setSsn(){
+	public void setSsn(String ssn){
 		this.ssn = ssn;
 	}
 	public String getSsn(){
 		return ssn;
 	}
-	public void setPass(String newpass){
+	public void setPass(String pass){
 		this.pass = pass;
 	}
 	public String getPass(){
 		return pass;
 	}
-	public String toString(){
-		String info = "";
-		
+	/*public String toString(){
 		return String.format(
 				"이름: %s \n"
 				+ "주민등록번호: %s \n"
 				+ "ID: %s \n"
 				+ "비밀번호: %s \n", name, ssn, id, pass);
+	}*/
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString();
 	}
 }

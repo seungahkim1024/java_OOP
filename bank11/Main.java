@@ -2,7 +2,7 @@ package bank11;
 
 import javax.swing.JOptionPane;
 
-import bank3.Account3;
+import bank03.Account3;
 
 public class Main {
 	public static void main(String[] args){

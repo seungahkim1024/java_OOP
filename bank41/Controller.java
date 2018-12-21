@@ -1,4 +1,4 @@
-package bank21;
+package bank41;
 
 import java.io.ObjectInputStream.GetField;
 
@@ -6,11 +6,12 @@ import javax.swing.JOptionPane;
 
 import bank03.Account3;
 
-public class Main {
+public class Controller {
 	public static void main(String[] args){
 		MemberBean member = null;
 		AccountBean account = null;
-		AccountService service = new AccountService();
+		AccountService service = new AccountServiceImpl();
+		MemberService memberService = new MemberServiceImpl();
 		while(true){
 			switch(JOptionPane.showInputDialog(
 					"[메뉴] 0.종료 \n"
@@ -23,15 +24,11 @@ public class Main {
 							+ "7.회원정보보기 \n")){
 							case "0": JOptionPane.showMessageDialog(null, "종료"); return;
 							case "1": 
-								String name = JOptionPane.showInputDialog("이름");
-								String ssn = JOptionPane.showInputDialog("주민번호");
-								String id = JOptionPane.showInputDialog("ID");
-								String pass = JOptionPane.showInputDialog("pass");
-								member = new MemberBean();
-								member.setId(id);
-								member.setPass(pass);
-								member.setName(name);
-								member.setSsn(ssn); //순서는 상관 x
+								member = memberService.join(JOptionPane.showInputDialog("이름"),
+								JOptionPane.showInputDialog("주민번호"),
+								JOptionPane.showInputDialog("ID"),
+								JOptionPane.showInputDialog("pass"));
+								
 								break;
 							case "2" :
 								account = new AccountBean();
