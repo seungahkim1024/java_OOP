@@ -72,5 +72,12 @@ OOP의 절차(프로세서)
         3, 객체들 사이에서 메시지를 주고 받게 한다. (클래스와 인스턴스사이에서 생산자를 이용해 메시지를 주고 받음)
         
 은닉화 getter, setter
-상속화 extends(확장)
-추상화 implements(구현)
+상속화 extends(확장) - 속성은 상속으로 확장(bean), 생성은 은닉화
+추상화 implements(구현) - 기능은 구현으로 확장(Service)
+
+데이터 패턴
+추가 Create  		 - set - void
+목록 list	(read)   - get - Object
+검색 find	(read)   - get - Object
+수정 update  		 - set - void
+삭제 delete  		 - set - void

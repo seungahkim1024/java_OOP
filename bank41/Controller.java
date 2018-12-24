@@ -8,9 +8,9 @@ import bank03.Account3;
 
 public class Controller {
 	public static void main(String[] args){
-		MemberBean member = null;
+		MemberBean member = null; //값이 없고, 받아야하니까 null.
 		AccountBean account = null;
-		AccountService service = new AccountServiceImpl();
+		AccountService service = new AccountServiceImpl(); 
 		MemberService memberService = new MemberServiceImpl();
 		while(true){
 			switch(JOptionPane.showInputDialog(
@@ -21,14 +21,17 @@ public class Controller {
 							+ "4.입금 \n"
 							+ "5.출금 \n"
 							+ "6.비번변경 \n"
-							+ "7.회원정보보기 \n")){
+							+ "7.회원정보보기 \n"
+							+ "8.회원목록보기 \n"
+							+ "9.ID 찾기 \n"
+							+ "10.로그인 \n"
+							+ "11.비밀번호업데이트")){
 							case "0": JOptionPane.showMessageDialog(null, "종료"); return;
 							case "1": 
-								member = memberService.join(JOptionPane.showInputDialog("이름"),
+								memberService.join(JOptionPane.showInputDialog("이름"),
 								JOptionPane.showInputDialog("주민번호"),
 								JOptionPane.showInputDialog("ID"),
 								JOptionPane.showInputDialog("pass"));
-								
 								break;
 							case "2" :
 								account = new AccountBean();
@@ -41,7 +44,7 @@ public class Controller {
 								account.setMoney(iMoney);
 								String info2 = service.info(
 										account.getAccountNum(), 
-										member.getName(), 
+										member.getName(),
 										account.getToday(),
 										account.getMoney());
 								JOptionPane.showMessageDialog(null, info2);
@@ -55,7 +58,6 @@ public class Controller {
 								//String msg = account.deposit(Integer.parseInt(inputMoney)); //account에서 사용하는 money에 입금액을 입력하기 위해 바로 int로 전환해줌
 								//JOptionPane.showMessageDialog(null, msg);
 								break;
-
 							case "5":
 								String outputMoney = JOptionPane.showInputDialog("출금액 입력");
 								//String msg1 = account.withdraw(Integer.parseInt(outputMoney)); //account에서 사용하는 money에 입금액을 입력하기 위해 바로 int로 전환해줌
@@ -68,10 +70,32 @@ public class Controller {
 							case "7":
 								JOptionPane.showMessageDialog(null,member.toString());
 								break;
-								
-
+							case "8":
+								MemberBean[] members = memberService.list();
+								JOptionPane.showMessageDialog(null, members);
+								break;
+							case "9":
+								String id = JOptionPane.showInputDialog("id");
+								JOptionPane.showMessageDialog(null, memberService.find(id));
+								break;
+							case "10":
+								id = JOptionPane.showInputDialog("로그인 id");
+								String pw = JOptionPane.showInputDialog("비밀번호");
+								boolean ok = memberService.login(id, pw);
+								if(ok){
+									JOptionPane.showMessageDialog(null, "로그인성공");
+								}else{
+									JOptionPane.showMessageDialog(null, "로그인 실패");
+								}
+								//JOptionPane.showMessageDialog(null, (ok)? "로그인 성공" : "로그인실패");
+								break;
+							case "11":
+								id = JOptionPane.showInputDialog("id");
+								pw = JOptionPane.showInputDialog("비밀번호");
+								String newPass = JOptionPane.showInputDialog("바꿀비밀번호");
+								memberService.update(id, pw, newPass); 
+								break;
 			}
-			
 		}
 	}
 }

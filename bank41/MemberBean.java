@@ -27,16 +27,12 @@ public class MemberBean {
 	public String getPass(){
 		return pass;
 	}
-	/*public String toString(){
+	public String toString(){
 		return String.format(
 				"이름: %s \n"
 				+ "주민등록번호: %s \n"
 				+ "ID: %s \n"
 				+ "비밀번호: %s \n", name, ssn, id, pass);
-	}*/
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
 	}
+	
 }
