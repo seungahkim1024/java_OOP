@@ -71,17 +71,17 @@ public class Controller {
 								JOptionPane.showMessageDialog(null,member.toString());
 								break;
 							case "8":
-								MemberBean[] members = memberService.list();
-								JOptionPane.showMessageDialog(null, members);
+								//MemberBean[] members = memberService.list();
+								//JOptionPane.showMessageDialog(null, members);
 								break;
 							case "9":
 								String id = JOptionPane.showInputDialog("id");
-								JOptionPane.showMessageDialog(null, memberService.find(id));
+								//JOptionPane.showMessageDialog(null, memberService.find(id));
 								break;
-							case "10":
+							/*case "10":
 								id = JOptionPane.showInputDialog("로그인 id");
 								String pw = JOptionPane.showInputDialog("비밀번호");
-								boolean ok = memberService.login(id, pw);
+								//boolean ok = memberService.login(id, pw);
 								if(ok){
 									JOptionPane.showMessageDialog(null, "로그인성공");
 								}else{
@@ -94,7 +94,7 @@ public class Controller {
 								pw = JOptionPane.showInputDialog("비밀번호");
 								String newPass = JOptionPane.showInputDialog("바꿀비밀번호");
 								memberService.update(id, pw, newPass); 
-								break;
+								break;*/
 			}
 		}
 	}
